@@ -191,9 +191,9 @@ AWK = gawk
 CC = gcc
 CCAS = gcc
 CCASDEPMODE = depmode=gcc3
-CCASFLAGS = -O2  -Ofast -flto -fuse-linker-plugin -ftree-loop-if-convert-stores -march=native -DUSE_ASM -pg
+CCASFLAGS = -Ofast -march=native
 CCDEPMODE = depmode=gcc3
-CFLAGS = -O2  -Ofast -flto -fuse-linker-plugin -ftree-loop-if-convert-stores -march=native -DUSE_ASM -pg  -Iyes/include -Iyes/include
+CFLAGS = -Ofast -march=native  -Iyes/include -Iyes/include
 CPP = gcc -E
 CPPFLAGS =   -Iyes/include -Iyes/include
 CXX = g++

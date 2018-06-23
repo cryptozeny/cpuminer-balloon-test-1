@@ -3341,13 +3341,14 @@ static int thread_create(struct thr_info *thr, void* func)
 
 static void show_credits()
 {
-        printf("\x1B[01;37m                                \n");
-        printf("  ▄▄▄▄   ▄▄▄  ▄▄▌  ▄▄▌               ▐ ▄   \n");
-        printf("  ▐█ ▀█ ▐█ ▀█ ██   ██                █▌▐█  \n");
-        printf("  ▐█▀▀█▄▄█▀▀█ ██   ██    ▄█▀▄  ▄█▀▄ ▐█▐▐▌  \n");
-        printf("  ██▄ ▐█▐█  ▐▌▐█▌▐▌▐█▌▐▌▐█▌ ▐▌▐█▌ ▐▌██▐█▌  \n");
-        printf("   ▀▀▀▀  ▀  ▀  ▀▀▀  ▀▀▀  ▀█▄▀  ▀█▄▀ ▀▀ █   \e[m\n");
         printf("    ** cpuminer-balloon / barrystyle **    \n");
+        // printf("\x1B[01;37m                                \n");
+        // printf("  ▄▄▄▄   ▄▄▄  ▄▄▌  ▄▄▌               ▐ ▄   \n");
+        // printf("  ▐█ ▀█ ▐█ ▀█ ██   ██                █▌▐█  \n");
+        // printf("  ▐█▀▀█▄▄█▀▀█ ██   ██    ▄█▀▄  ▄█▀▄ ▐█▐▐▌  \n");
+        // printf("  ██▄ ▐█▐█  ▐▌▐█▌▐▌▐█▌▐▌▐█▌ ▐▌▐█▌ ▐▌██▐█▌  \n");
+        // printf("   ▀▀▀▀  ▀  ▀  ▀▀▀  ▀▀▀  ▀█▄▀  ▀█▄▀ ▀▀ █   \e[m\n");
+        // printf("    ** cpuminer-balloon / barrystyle **    \n");
         printf("\n");
 }
 

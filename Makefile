@@ -90,11 +90,11 @@ build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
 target_triplet = x86_64-pc-linux-gnu
 bin_PROGRAMS = cpuminer$(EXEEXT)
-am__append_1 = asm/neoscrypt_asm.S
-#am__append_2 = asm/sha2-x86.S asm/scrypt-x86.S asm/aesb-x86.S
-am__append_3 = asm/sha2-x64.S asm/scrypt-x64.S asm/aesb-x64.S
-#am__append_4 = asm/sha2-arm.S asm/scrypt-arm.S
-#am__append_5 = -DNOASM
+#am__append_1 = asm/neoscrypt_asm.S
+##am__append_2 = asm/sha2-x86.S asm/scrypt-x86.S asm/aesb-x86.S
+#am__append_3 = asm/sha2-x64.S asm/scrypt-x64.S asm/aesb-x64.S
+##am__append_4 = asm/sha2-arm.S asm/scrypt-arm.S
+am__append_5 = -DNOASM
 #am__append_6 = compat/winansi.c
 #am__append_7 = -Wl,--stack,10485760
 #am__append_8 = -lcrypt32 -lgdi32 -lgcc -lgcc_eh
@@ -144,17 +144,17 @@ am__cpuminer_SOURCES_DIST = cpu-miner.c util.c api.c sysinfos.c \
 	asm/aesb-x86.S asm/sha2-x64.S asm/scrypt-x64.S asm/aesb-x64.S \
 	asm/sha2-arm.S asm/scrypt-arm.S compat/winansi.c
 am__dirstamp = $(am__leading_dot)dirstamp
-am__objects_1 = asm/cpuminer-neoscrypt_asm.$(OBJEXT)
-#am__objects_2 =  \
-#	asm/cpuminer-sha2-x86.$(OBJEXT) \
-#	asm/cpuminer-scrypt-x86.$(OBJEXT) \
-#	asm/cpuminer-aesb-x86.$(OBJEXT)
-am__objects_3 = asm/cpuminer-sha2-x64.$(OBJEXT) \
-	asm/cpuminer-scrypt-x64.$(OBJEXT) \
-	asm/cpuminer-aesb-x64.$(OBJEXT)
-#am__objects_4 =  \
-#	asm/cpuminer-sha2-arm.$(OBJEXT) \
-#	asm/cpuminer-scrypt-arm.$(OBJEXT)
+#am__objects_1 = asm/cpuminer-neoscrypt_asm.$(OBJEXT)
+##am__objects_2 =  \
+##	asm/cpuminer-sha2-x86.$(OBJEXT) \
+##	asm/cpuminer-scrypt-x86.$(OBJEXT) \
+##	asm/cpuminer-aesb-x86.$(OBJEXT)
+#am__objects_3 = asm/cpuminer-sha2-x64.$(OBJEXT) \
+#	asm/cpuminer-scrypt-x64.$(OBJEXT) \
+#	asm/cpuminer-aesb-x64.$(OBJEXT)
+##am__objects_4 =  \
+##	asm/cpuminer-sha2-arm.$(OBJEXT) \
+##	asm/cpuminer-scrypt-arm.$(OBJEXT)
 #am__objects_5 = compat/cpuminer-winansi.$(OBJEXT)
 am_cpuminer_OBJECTS = cpuminer-cpu-miner.$(OBJEXT) \
 	cpuminer-util.$(OBJEXT) cpuminer-api.$(OBJEXT) \
@@ -417,9 +417,9 @@ AWK = gawk
 CC = gcc
 CCAS = gcc
 CCASDEPMODE = depmode=gcc3
-CCASFLAGS = -O2  -Ofast -flto -fuse-linker-plugin -ftree-loop-if-convert-stores -march=native -DUSE_ASM -pg
+CCASFLAGS = -Ofast -march=native
 CCDEPMODE = depmode=gcc3
-CFLAGS = -O2  -Ofast -flto -fuse-linker-plugin -ftree-loop-if-convert-stores -march=native -DUSE_ASM -pg  -Iyes/include -Iyes/include
+CFLAGS = -Ofast -march=native  -Iyes/include -Iyes/include
 CPP = gcc -E
 CPPFLAGS =   -Iyes/include -Iyes/include
 CXX = g++

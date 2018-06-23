@@ -24,7 +24,7 @@ void balloon (const void* input, void* output) {
   struct balloon_options opts;
   struct hash_state s;
   // balloon_init (&opts, (int64_t)128, (int32_t)4);
-  balloon_init (&opts, (int64_t)1024, (int32_t)16);
+  balloon_init (&opts, (int64_t)16384, (int32_t)16);
   hash_state_init (&s, &opts, input);
   hash_state_fill (&s, input, 80);
   hash_state_mix (&s);
